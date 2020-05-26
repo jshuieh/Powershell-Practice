@@ -19,7 +19,7 @@ $input = Read-Host "How many Fibonnaci values would you like to compute?"
 
 if ($input -match "^\d+$") { 
     Get-Fib ($input -as [int])
-} elseif ($input -match "-?^\d+$") {
+} elseif ($input -match "^-\d+$") {
     Write-Output "You did not input a positive integer."
 } else {
     Write-Output "You did not input an integer."
